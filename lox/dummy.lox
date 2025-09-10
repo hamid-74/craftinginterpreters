@@ -1,18 +1,5 @@
-// class Breakfast {
-//   cook() {
-//     print "Eggs a-fryin'!";
-//   }
-
-//   serve(who) {
-//     print "Enjoy your breakfast, " + who + ".";
-//   }
-// }
-
-// var breakfast = Breakfast();
-// print breakfast; // "Breakfast instance".
-
-4 / 0;
-
-print 4 + 87 + 42.21 * 891 / 42 - 3;
-
-print "kose madare bagher" + "  " + " isa dadash chetori?";
+var a = 1;
+{
+  var a = a + 2;
+  print a;
+}
