@@ -6,7 +6,22 @@ int main(int argc, const char *argv[]) {
 
   Chunk chunk;
   initChunk(&chunk);
-  writeChunk(&chunk, OP_RETURN);
+
+
+  int constant = addConstant(&chunk, 1.2);
+  
+  writeChunk(&chunk, OP_CONSTANT, 123);
+  writeChunk(&chunk, constant, 123);
+
+  constant = addConstant(&chunk, 3.456);
+  writeChunk(&chunk, OP_CONSTANT, 123);
+  writeChunk(&chunk, constant, 123);
+
+  writeChunk(&chunk, OP_CONSTANT, 123);
+  writeChunk(&chunk, constant, 123);
+
+
+  writeChunk(&chunk, OP_RETURN, 124);
 
   disassembleChunk(&chunk, "test chunk");
   freeChunk(&chunk);
